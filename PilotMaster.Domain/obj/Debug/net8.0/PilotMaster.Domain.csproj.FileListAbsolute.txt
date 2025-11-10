@@ -1,0 +1,11 @@
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\bin\Debug\net8.0\PilotMaster.Domain.deps.json
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\bin\Debug\net8.0\PilotMaster.Domain.dll
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\bin\Debug\net8.0\PilotMaster.Domain.pdb
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.AssemblyInfoInputs.cache
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.AssemblyInfo.cs
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.dll
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\refint\PilotMaster.Domain.dll
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.pdb
+C:\Users\Davi\source\repos\PilotMaster.Api\PilotMaster.Domain\obj\Debug\net8.0\ref\PilotMaster.Domain.dll
