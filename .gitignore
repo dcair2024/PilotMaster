@@ -1,0 +1,4 @@
+# Arquivos e Pastas do Visual Studio (Ignorar arquivos temporários)
+.vs/
+*/bin/
+*/obj/
