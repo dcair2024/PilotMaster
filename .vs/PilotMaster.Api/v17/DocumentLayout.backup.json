@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\davi\\source\\repos\\pilotmaster\\pilotmaster.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\README.md",
               "RelativeDocumentMoniker": "PilotMaster.Api\\README.md",
@@ -107,15 +107,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "PilotMaster.Api\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "PilotMaster.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAnwE0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T20:05:46.895Z"
+              "WhenOpened": "2025-11-10T20:05:46.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -155,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "PilotMaster.Application\\Interfaces\\ITokenService.cs",
@@ -163,8 +164,7 @@
               "RelativeToolTip": "PilotMaster.Application\\Interfaces\\ITokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T19:57:08.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T19:57:08.462Z"
             },
             {
               "$type": "Document",
@@ -180,13 +180,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs",
               "RelativeDocumentMoniker": "PilotMaster.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs",
-              "RelativeToolTip": "PilotMaster.Api\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs*",
+              "RelativeToolTip": "PilotMaster.Api\\Program.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T19:45:22.615Z",
               "EditorCaption": ""
