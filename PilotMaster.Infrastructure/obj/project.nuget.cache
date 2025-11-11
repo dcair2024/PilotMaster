@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "00Pnu30hiCs=",
+  "dgSpecHash": "IUrqk5CAP9g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Davi\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Davi\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

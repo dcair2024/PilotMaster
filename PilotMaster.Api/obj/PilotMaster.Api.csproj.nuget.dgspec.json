@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Api\\PilotMaster.Api.csproj": {}
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Api\\PilotMaster.Api.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Api\\PilotMaster.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
         "projectName": "PilotMaster.Api",
-        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Api\\PilotMaster.Api.csproj",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
         "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Api\\obj\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Application\\PilotMaster.Application.csproj": {
-                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Application\\PilotMaster.Application.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Application\\PilotMaster.Application.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Application\\PilotMaster.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
         "projectName": "PilotMaster.Application",
-        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Application\\PilotMaster.Application.csproj",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
         "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Application\\obj\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -126,11 +126,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
               },
-              "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj"
               }
             }
           }
@@ -170,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
         "projectName": "PilotMaster.Domain",
-        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
         "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -236,14 +236,14 @@
         }
       }
     },
-    "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
         "projectName": "PilotMaster.Infrastructure",
-        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -265,8 +265,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster.Api\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
               }
             }
           }
