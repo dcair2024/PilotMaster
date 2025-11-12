@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 // Importa as páginas e a Guarda de Rota
 import LoginPage from './Pages/Login'; 
 import HomePage from './Pages/Home';
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
     return (

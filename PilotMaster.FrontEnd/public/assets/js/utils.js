@@ -95,7 +95,6 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 window.showToast = showToast;
-window.showLoading = showLoading;
-window.hideLoading = hideLoading;
-
+window.showLoading = showLoading; // Se existir
+window.hideLoading = hideLoading; // Se existir
 console.log("✅ utils.js carregado e funções globais disponíveis!");
