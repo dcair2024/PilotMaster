@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 // 1. IMPORTAÇÃO: Adiciona a função 'login' do seu serviço
-import { login } from '../services/AuthService'; 
+import { login } from '../Services/AuthService'; 
 
 function LoginPage() {
     const [email, setEmail] = useState('');

@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-// 1. A URL base que aponta para http://localhost:5000/api
+// 1. A URL base que aponta para https://localhost:7031/api/auth/login
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 /**

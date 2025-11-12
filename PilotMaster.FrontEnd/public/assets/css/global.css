@@ -1,0 +1,105 @@
+/* ======================================
+   GLOBAL.CSS — PilotMaster
+   Autor: Claudio
+   ====================================== */
+
+:root {
+  /* Tipografia */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Tema base */
+  color-scheme: light dark;
+  color: #1a1a1a;
+  background-color: #f7f9fc;
+
+  /* Suavização de texto */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Variáveis visuais */
+  --color-primary: #0055ff;
+  --color-secondary: #0099ff;
+  --color-accent: #ffb100;
+
+  --color-success: #28a745;
+  --color-error: #dc3545;
+  --color-warning: #ffc107;
+
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-border: #d9dee3;
+  --color-text: #1a1a1a;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Corpo */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Títulos */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Botões */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background-color: var(--color-secondary);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+}
+
+/* Tema claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-text);
+    background-color: var(--color-surface);
+  }
+  button {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+  a:hover {
+    color: var(--color-secondary);
+  }
+}
