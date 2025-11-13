@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
 
 
 
@@ -16,6 +19,7 @@ namespace PilotMaster.Domain.Entities
         // Informações essenciais para o cálculo do custo base:
         public decimal GRT { get; set; }
         public string Area { get; set; } = string.Empty; // Ex: "Area I", "Ilhéus"
+        [Precision(10, 2)]
         public decimal Calado { get; set; }
 
         // Fatores de risco/condição (para o multiplicador maior):

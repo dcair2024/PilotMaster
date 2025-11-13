@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PilotMaster.Domain.Entities;
+using System.Security.Cryptography;
+
 
 namespace PilotMaster.Infrastructure.Data
 {
@@ -20,13 +22,22 @@ namespace PilotMaster.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configuração do relacionamento Manobra-Navio
-            modelBuilder.Entity<Manobra>()
-                .HasOne(m => m.Navio)
-                .WithMany(n => n.Manobras)
-                .HasForeignKey(m => m.NavioId);
-
             base.OnModelCreating(modelBuilder);
+
+            // Cria hash da senha
+            using var sha256 = SHA256.Create();
+            var hash = sha256.ComputeHash(Encoding.UTF8.GetBytes("Admin@123"));
+            var senhaHash = BitConverter.ToString(hash).Replace("-", "");
+
+            modelBuilder.Entity<Usuario>().HasData(
+                new Usuario
+                {
+                    Id = 1,
+                    Email = "admin@pilotmaster.com",
+                    SenhaHash = senhaHash,
+                    Role = "Supervisor"
+                }
+            );
         }
     }
 }

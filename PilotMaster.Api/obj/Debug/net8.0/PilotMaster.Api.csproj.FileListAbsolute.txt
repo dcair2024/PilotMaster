@@ -357,3 +357,7 @@ C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\refint\P
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.pdb
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.genruntimeconfig.cache
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\ref\PilotMaster.Api.dll
+C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\bin\Debug\net8.0\PilotMaster.Api.xml
+C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.xml

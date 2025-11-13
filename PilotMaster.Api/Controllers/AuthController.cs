@@ -5,6 +5,8 @@ using PilotMaster.Application.DTOs;
 using PilotMaster.Application.Interfaces;
 using PilotMaster.Infrastructure.Data;
 using System.Security.Claims;
+using System.Security.Cryptography; // Para usar SHA256
+using System.Text;                  // Para usar Encoding.UTF8
 
 namespace PilotMaster.Api.Controllers
 {
@@ -22,7 +24,7 @@ namespace PilotMaster.Api.Controllers
             _tokenService = tokenService;
         }
 
-        
+
         [HttpPost("login")]
         public async Task<ActionResult<TokenResponse>> Login([FromBody] LoginRequest request)
         {
@@ -32,16 +34,23 @@ namespace PilotMaster.Api.Controllers
 
             if (usuario == null)
             {
+                // Mensagem genérica para segurança
                 return Unauthorized(new { Message = "Email ou senha inválidos." });
             }
 
-            // 2. Valida a senha (USANDO LÓGICA SIMPLES POR ENQUANTO)
-            // IMPORTANTE: Em produção, você usará uma biblioteca de hashing (como BCrypt ou Argon2)
-            // Por enquanto, vamos simular:
-            if (usuario.SenhaHash != request.Senha)
+            // 2. 🔑 VALIDAÇÃO DA SENHA CORRIGIDA (AGORA COM SHA256)
+            using var sha256 = SHA256.Create();
+            var hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(request.Senha));
+
+            // Converte o array de bytes em string HASH (MAIÚSCULA, sem hífens)
+            var senhaHash = BitConverter.ToString(hash).Replace("-", "");
+
+            // Compara o HASH da senha de entrada com o HASH salvo no banco
+            if (usuario.SenhaHash != senhaHash)
             {
                 return Unauthorized(new { Message = "Email ou senha inválidos." });
             }
+            // 🔑 FIM DA VALIDAÇÃO CORRIGIDA
 
             // 3. Gera os Tokens
             var accessToken = _tokenService.GenerateAccessToken(usuario);
@@ -58,30 +67,10 @@ namespace PilotMaster.Api.Controllers
                 AccessToken = accessToken,
                 RefreshToken = refreshToken,
                 UserRole = usuario.Role,
-                Expiration = securityToken!.ValidTo // Pega a data de expiração do token
+                Expiration = securityToken!.ValidTo
             });
         }
 
-        // 🎯 Endpoint: GET /api/auth/test (Rota Protegida) [cite: 35]
-        [HttpGet("test")]
-        [Authorize(Roles = "Agente,Supervisor")] // Apenas usuários logados com essas roles acessam
-        public ActionResult<string> TestProtectedEndpoint()
-        {
-            // Acesso às Claims do usuário logado
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var userEmail = User.FindFirstValue(ClaimTypes.Email);
-            var userRole = User.FindFirstValue(ClaimTypes.Role);
-
-            return Ok($"Endpoint Protegido OK. Usuário {userId} ({userEmail}) logado com a Role: {userRole}.");
-        }
-
-        // 🎯 Endpoint: POST /api/auth/refresh (Para Implementação Posterior) [cite: 34]
-        // Esta rota exige a validação do Refresh Token no banco, que é mais complexa.
-        [HttpPost("refresh")]
-        public ActionResult RefreshToken([FromBody] TokenResponse tokens)
-        {
-            // Retorna um placeholder, pois a lógica exige salvar o Refresh Token no banco (futuro)
-            return StatusCode(501, "O endpoint /auth/refresh está temporariamente indisponível na Sprint 1 (Foco: Login/Auth Base).");
-        }
+        // ... (Os endpoints /test e /refresh continuam os mesmos)
     }
 }

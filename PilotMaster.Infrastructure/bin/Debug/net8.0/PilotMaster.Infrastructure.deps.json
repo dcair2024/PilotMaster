@@ -1041,6 +1041,9 @@
         }
       },
       "PilotMaster.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.10"
+        },
         "runtime": {
           "PilotMaster.Domain.dll": {
             "assemblyVersion": "1.0.0.0",

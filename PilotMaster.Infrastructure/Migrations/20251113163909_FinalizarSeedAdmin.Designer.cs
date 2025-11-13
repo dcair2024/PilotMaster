@@ -12,8 +12,8 @@ using PilotMaster.Infrastructure.Data;
 namespace PilotMaster.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251110195103_AddManobraCostFields")]
-    partial class AddManobraCostFields
+    [Migration("20251113163909_FinalizarSeedAdmin")]
+    partial class FinalizarSeedAdmin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,7 +38,8 @@ namespace PilotMaster.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Calado")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
@@ -109,6 +110,15 @@ namespace PilotMaster.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "admin@pilotmaster.com",
+                            Role = "Supervisor",
+                            SenhaHash = "E86F78A8A3CAF0B60D8E74E5942AA6D86DC150CD3C03338AEF25B7D2D7E3ACC7"
+                        });
                 });
 
             modelBuilder.Entity("PilotMaster.Domain.Entities.Manobra", b =>

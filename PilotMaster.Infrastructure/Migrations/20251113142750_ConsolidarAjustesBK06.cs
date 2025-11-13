@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PilotMaster.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class AddManobraCostFields : Migration
+    public partial class ConsolidarAjustesBK06 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -50,7 +50,7 @@ namespace PilotMaster.Infrastructure.Migrations
                     Data = table.Column<DateTime>(type: "datetime2", nullable: false),
                     GRT = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Area = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Calado = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Calado = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
                     SemMaquinaLeme = table.Column<bool>(type: "bit", nullable: false),
                     Emergencia = table.Column<bool>(type: "bit", nullable: false),
                     NavioId = table.Column<int>(type: "int", nullable: false)
@@ -65,6 +65,11 @@ namespace PilotMaster.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Usuarios",
+                columns: new[] { "Id", "Email", "Role", "SenhaHash" },
+                values: new object[] { 1, "admin@pilotmaster.com", "Supervisor", "e86f78a8a3caf0b60d8e74e5942aa6d86dc150cd3c03338aef25b7d2d7e3acc7" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Manobras_NavioId",
