@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using PilotMaster.Application.Interfaces;
 using PilotMaster.Application.Services;
 using PilotMaster.Infrastructure.Data;
-using System.Text;
-using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Text;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 
 // ADICIONE ESTA LINHA: Habilita o suporte a Controllers MVC/API
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Esta linha garante que o servidor entenda e use o padrão camelCase,
+        // alinhando-se ao Fronten (JavaScript).
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    });
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
@@ -88,11 +96,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ClockSkew = TimeSpan.Zero
         };
     });
+const string AllowPilotMasterOrigin = "_AllowPilotMasterOrigin";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: AllowPilotMasterOrigin,
+        policy =>
+        {
+            // Permite o acesso APENAS do endereço do Frontend da Gemima
+            // O Frontend da Gemima está rodando em http://localhost:5173
+            policy.WithOrigins("http://localhost:5173")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 
 
 var app = builder.Build();
-
+app.UseCors(AllowPilotMasterOrigin);
 
 app.UseAuthentication();
 app.UseAuthorization();

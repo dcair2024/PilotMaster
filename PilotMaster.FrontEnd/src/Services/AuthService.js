@@ -1,9 +1,9 @@
 // /src/services/AuthService.js
 
-import axios from 'axios';
+// Removido import axios; usando fetch por enquanto
 
 // 1. A URL base que aponta para https://localhost:7031/api/auth/login
-const API_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = 'https://localhost:7031/api';
 
 /**
  * Envia credenciais para o backend (/auth/login) e armazena o Access Token.
@@ -13,32 +13,40 @@ const API_URL = import.meta.env.VITE_API_BASE_URL;
  */
 export const login = async (email, password) => {
     try {
-        // Chamada POST para o endpoint do Davi: /auth/login
-        const response = await axios.post(`${API_URL}/auth/login`, {
-            email,
-            password,
+        // O código de fetch começa diretamente aqui (sem o segundo 'export const login')
+        const response = await fetch(`${API_BASE_URL}/auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
         });
 
-        const { accessToken } = response.data;
+        const data = await response.json();
 
-        if (accessToken) {
-            // Requisito da Tarefa 3: Armazena o token no localStorage
-            localStorage.setItem('accessToken', accessToken);
+        if (response.ok) {
+            // ⭐️ 1. ARMAZENAMENTO DO TOKEN ⭐️
+            const { token } = data; 
+            localStorage.setItem('pilotmaster_token', token); // Chave correta para guardar
+            
+            return { success: true, token };
+        } else {
+            throw new Error(data.message || 'Falha na autenticação. Verifique suas credenciais.');
         }
 
-        return response.data;
-
     } catch (error) {
-        // Lança um erro com a mensagem do backend, se disponível
-        throw new Error(error.response?.data.message || 'Erro ao conectar com o serviço de autenticação.');
+        // Erro de rede (servidor fora do ar, por exemplo)
+        console.error("Erro ao tentar login:", error);
+        throw new Error('Não foi possível conectar ao servidor.');
     }
-};
+}; // Fim da função login
 
-// Funções utilitárias que serão usadas nas rotas protegidas
+// Funções utilitárias
 export const logout = () => {
-    localStorage.removeItem('accessToken');
+    // A chave usada para armazenar é 'pilotmaster_token', então deve ser removida
+    localStorage.removeItem('pilotmaster_token'); 
 };
 
-export const getToken = () => {
-    return localStorage.getItem('accessToken');
+export const getAuthToken = () => {
+    return localStorage.getItem('pilotmaster_token');
 };

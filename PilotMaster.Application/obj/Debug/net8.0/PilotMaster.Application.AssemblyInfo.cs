@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PilotMaster.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5228d1e662e47d475c3dd21d92e76d7c386e786f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68a84007a69ac69d0c77a16b623934852daa5a6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PilotMaster.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PilotMaster.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,76 +1,66 @@
 // /src/pages/Login.jsx
 
+// Arquivo: src/pages/Login.jsx
 import React, { useState } from 'react';
-// 1. IMPORTAÇÃO: Adiciona a função 'login' do seu serviço
-import { login } from '../Services/AuthService'; 
+import { useNavigate } from 'react-router-dom';
+import { login } from '../Services/AuthService';
+// Importe as funções de loading e toast que o Claudio criou (FE-06)
+// import { showToast, showLoading } from '../utils/utils'; 
 
-function LoginPage() {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(null); 
-    const [isLoading, setIsLoading] = useState(false); 
+    const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false); // Para o loading manual (FE-06)
 
-    // 2. ATUALIZAÇÃO: A função agora é assíncrona (async)
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError(null);
-        setIsLoading(true);
+
+        setIsLoading(true); // ⭐️ 1. Exibir Loading (Início da FE-06)
 
         try {
-            // 3. USO DO SERVIÇO: Chama a API do Davi
-            await login(email, password);
+            // A credencial de teste que deve funcionar agora: admin@pilotmaster.com / Admin@123
+            const result = await login(email, password);
 
-            // Se chegou aqui, o login foi SUCESSO e o token está no localStorage.
-            console.log('Login Sucedido! Redirecionando...');
+            if (result.success) {
+                // Login Aprovado (QA-05 Aprovado!)
+                navigate('/home'); // Redireciona para a rota protegida
+                // showToast('success', 'Bem-vindo ao PilotMaster!'); 
+            }
 
-            // 4. PRÓXIMA TAREFA: Aqui deve ocorrer o redirecionamento para a rota /home
-            // (Isso será implementado na Tarefa 4 com um roteador)
-            alert('Login Sucedido! Preparado para a página /home');
-
-        } catch (err) {
-            // Se houver erro (login inválido, API fora do ar)
-            setError(err.message || 'Erro de autenticação.');
-            console.error(err);
+        } catch (error) {
+            // ⭐️ 2. Exibir Toast de Erro (Fim da FE-06)
+            console.error(error.message);
+            // showToast('error', error.message); 
         } finally {
-            setIsLoading(false);
+            setIsLoading(false); // ⭐️ 3. Ocultar Loading (Fim da FE-06)
         }
     };
 
     return (
-        <div className="login-container">
-            <h1>Acesso PilotMaster</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>} 
+        <form onSubmit={handleSubmit}>
+            {/* Input para Email, ligando ao estado 'email' */}
+            <input 
+                type="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                placeholder="Email" 
+            />
+            {/* Input para Senha, ligando ao estado 'password' */}
+            <input 
+                type="password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
+                placeholder="Senha" 
+            />
             
-            <form onSubmit={handleSubmit}>
-                
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input
-                        id="email"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                
-                <div>
-                    <label htmlFor="password">Senha</label>
-                    <input
-                        id="password"
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                
-                <button type="submit" disabled={isLoading}>
-                    {isLoading ? 'Conectando...' : 'Entrar'}
-                </button>
-            </form>
-        </div>
+            [cite_start]{/* O botão 'ENTRAR' do wireframe [cite: 48] */}
+            <button type="submit" disabled={isLoading}>
+                {isLoading ? 'Carregando...' : 'ENTRAR'} 
+            </button>
+            {/* Aqui você integraria o componente de spinner de loading do Claudio */}
+        </form>
     );
-}
+};
 
-export default LoginPage;
+export default Login;

@@ -339,7 +339,6 @@ C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMas
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.AssemblyInfoInputs.cache
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.AssemblyInfo.cs
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.csproj.CoreCompileInputs.cache
-C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.sourcelink.json
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\rjimswa.dswa.cache.json

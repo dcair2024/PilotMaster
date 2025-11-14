@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import { getToken } from '../Services/AuthService'; // Importa a função do token
+import { getAuthToken } from '/src/services/AuthService'; // <-- Função importada
 
 function ProtectedRoute() {
-    // Verifica se o token existe no localStorage (Função que criamos no AuthService)
-    const isAuthenticated = getToken();
+    // ⭐️ CORREÇÃO AQUI: Chamar a função com o nome correto (getAuthToken)
+    const isAuthenticated = getAuthToken(); // ✅ CORRIGIDO
 
     // Se o usuário estiver autenticado (tem token), renderiza a página (Outlet).
     if (isAuthenticated) {
