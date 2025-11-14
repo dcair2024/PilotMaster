@@ -360,3 +360,4 @@ C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\bin\Debug\net8.0\AutoMapp
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\bin\Debug\net8.0\PilotMaster.Api.xml
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.xml
+C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Api\obj\Debug\net8.0\PilotMaster.Api.MvcApplicationPartsAssemblyInfo.cs
