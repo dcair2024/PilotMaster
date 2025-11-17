@@ -103,8 +103,8 @@ builder.Services.AddCors(options =>
         policy =>
         {
             // Permite o acesso APENAS do endereço do Frontend da Gemima
-            // O Frontend da Gemima está rodando em http://localhost:5174
-            policy.WithOrigins("http://localhost:5174")
+            // O Frontend da Gemima está rodando em http://localhost:5175
+            policy.WithOrigins("http://localhost:5175")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });

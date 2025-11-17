@@ -1,6 +1,7 @@
 // /src/App.jsx (ou onde você está definindo as rotas)
 
 import React from 'react';
+import Dashboard from './Pages/Dashboard';
 // Importa componentes do roteador
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
@@ -24,7 +25,7 @@ function App() {
                     {/* Rota 3: /home (ROTA PROTEGIDA - usa o ProtectedRoute) */}
                     <Route element={<ProtectedRoute />}>
                         {/* A página HomePage só será acessada se ProtectedRoute retornar <Outlet> */}
-                        <Route path="/home" element={<HomePage />} />
+                        <Route path="/home" element={<Dashboard />} />
                     </Route>
                     
                     {/* Rota 4: Qualquer outra rota (Pode ser uma página 404) */}

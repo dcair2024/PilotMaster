@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PilotMaster.Application.DTOs;
-using System.Collections.Generic; // Necessário para IEnumerable
+using System.Collections.Generic;
+
 
 namespace PilotMaster.Api.Controllers
 {
     // Rota base: /api/dashboard
-    [Route("api/[controller]")]
-    [ApiController]
+    
+    [Route("api/[controller]")] // ⬅️ ESTE ATRIBUTO É VITAL: Cria o prefixo /api/dashboard
+    [ApiController] // ⬅️ Este atributo ajuda o ASP.NET a mapear a rota corretamente
     [Authorize]
     public class DashboardController : ControllerBase
     {
