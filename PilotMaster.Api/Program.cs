@@ -4,130 +4,99 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PilotMaster.Application.Interfaces;
-using Microsoft.EntityFrameworkCore;
-
 using PilotMaster.Application.Services;
 using PilotMaster.Infrastructure.Data;
+using PilotMaster.Domain.Entities;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração do DbContext
+// DB (SQLite)
 builder.Services.AddDbContext<AppDbContext>(options =>
-    // 🚨 COMENTE ESTA LINHA: options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=PilotMaster.db"));
 
-    // ⬇️ FORÇA O VALOR CORRETO DO SQLITE NO CÓDIGO ⬇️
-    options.UseSqlite("Data Source=PilotMaster.db"));
-
-
-
-// ADICIONE ESTA LINHA: Habilita o suporte a Controllers MVC/API
+// Controllers + JSON camelCase
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        // Esta linha garante que o servidor entenda e use o padrão camelCase,
-        // alinhando-se ao Fronten (JavaScript).
         options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
     });
 
+// AutoMapper (se usa)
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+// Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "put-a-really-secret-key-here")),
+
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero
+        };
+    });
+
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PilotMaster API", Version = "v1" });
-    // Configuração para incluir comentários XML 
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-
-    // Configuração de Segurança JWT no Swagger 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "Insira o token JWT no formato: Bearer {token}",
+        Description = "Insira o token no formato: Bearer {seuTokenAqui}",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
-
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            new string[] {}
+            new OpenApiSecurityScheme { Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" } },
+            new string[] { }
         }
     });
 });
 
-
-
-// Injeção de Dependência
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddAuthorization();
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
-
-
-// Configure a Autenticação JWT
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            // Valida a chave do emissor (Key)
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
-
-            // Valida o Emissor (Issuer)
-            ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-
-            // Valida a Audiência (Audience)
-            ValidateAudience = true,
-            ValidAudience = builder.Configuration["Jwt:Audience"],
-
-            // Valida o tempo de expiração (Expiry)
-            ValidateLifetime = true,
-            ClockSkew = TimeSpan.Zero
-        };
-    });
-const string AllowPilotMasterOrigin = "_AllowPilotMasterOrigin";
+// CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:5174")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5174")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
-
+// DI
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
+
 app.UseCors("AllowFrontend");
 
-
-app.UseAuthentication();
-app.UseAuthorization();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -136,14 +105,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    await IdentitySeed.SeedAsync(services);
-}
-
 app.Run();
-

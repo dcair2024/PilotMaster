@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PilotMaster.Domain.Entities;
+﻿using PilotMaster.Domain.Entities;
 
 namespace PilotMaster.Application.Interfaces
 {
-    // Define o contrato para o serviço de Token
     public interface ITokenService
     {
-        // Gera o token de acesso principal
+        // Versão antiga (se você ainda usar Usuario)
         string GenerateAccessToken(Usuario usuario);
 
-        // Gera o token de refresh (para obter novos Access Tokens)
+        // Versão para Identity / ApplicationUser
+        string GenerateAccessToken(ApplicationUser user, string role);
+
+        // Refresh token
         string GenerateRefreshToken();
     }
 }

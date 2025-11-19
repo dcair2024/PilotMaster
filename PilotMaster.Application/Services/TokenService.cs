@@ -2,15 +2,15 @@
 using Microsoft.IdentityModel.Tokens;
 using PilotMaster.Application.Interfaces;
 using PilotMaster.Domain.Entities;
+using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-
 namespace PilotMaster.Application.Services
 {
-    // Implementação da interface ITokenService
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _config;
@@ -19,31 +19,49 @@ namespace PilotMaster.Application.Services
         public TokenService(IConfiguration config)
         {
             _config = config;
-            // Cria a chave criptográfica a partir da string no appsettings.json
-            _jwtKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
+            var key = _config["Jwt:Key"] ?? throw new ArgumentNullException("Jwt:Key not configured");
+            _jwtKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
         }
 
-        // Gera o Token de Acesso (Access Token)
+        // Versão antiga (mantive para compatibilidade)
         public string GenerateAccessToken(Usuario usuario)
         {
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
-                new Claim(ClaimTypes.Email, usuario.Email),
-                new Claim(ClaimTypes.Role, usuario.Role) // Adiciona a ROLE (Agente/Supervisor) [cite: 29]
+                new Claim(ClaimTypes.Email, usuario.Email ?? string.Empty),
+                new Claim(ClaimTypes.Role, usuario.Role ?? string.Empty)
             };
 
+            return CreateToken(claims);
+        }
+
+        // Versão para ApplicationUser usado pelo Identity
+        public string GenerateAccessToken(ApplicationUser user, string role)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+                new Claim(ClaimTypes.Role, role ?? string.Empty)
+            };
+
+            return CreateToken(claims);
+        }
+
+        private string CreateToken(List<Claim> claims)
+        {
             var credentials = new SigningCredentials(_jwtKey, SecurityAlgorithms.HmacSha256);
 
-            // Define o tempo de expiração do Access Token
-            var expires = DateTime.UtcNow.AddMinutes(
-                double.Parse(_config["Jwt:ExpiryMinutes"]!));
+            var expiryMinutes = _config["Jwt:ExpiryMinutes"];
+            var minutes = !string.IsNullOrWhiteSpace(expiryMinutes) && double.TryParse(expiryMinutes, out var m)
+                ? m
+                : 60.0; // fallback
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = expires,
+                Expires = DateTime.UtcNow.AddMinutes(minutes),
                 SigningCredentials = credentials,
                 Issuer = _config["Jwt:Issuer"],
                 Audience = _config["Jwt:Audience"]
@@ -51,19 +69,15 @@ namespace PilotMaster.Application.Services
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
-
             return tokenHandler.WriteToken(token);
         }
 
-        // Gera o Refresh Token (apenas uma string aleatória por enquanto, para ser salva no banco)
         public string GenerateRefreshToken()
         {
             var randomNumber = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
-            {
-                rng.GetBytes(randomNumber);
-                return Convert.ToBase64String(randomNumber);
-            }
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
         }
     }
 }

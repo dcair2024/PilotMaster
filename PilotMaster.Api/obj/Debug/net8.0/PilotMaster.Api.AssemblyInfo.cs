@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PilotMaster.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a499a6230cf23d85eb4322ccde1c1157134ea793")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8934593b3004d32a365fec2f9ece433501d109d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("PilotMaster.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PilotMaster.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
