@@ -1,66 +1,52 @@
-// /src/pages/Login.jsx
+import { useState } from "react";
+import { login } from "../Services/AuthService";
 
-// Arquivo: src/pages/Login.jsx
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { login } from '../Services/AuthService';
-// Importe as funções de loading e toast que o Claudio criou (FE-06)
-// import { showToast, showLoading } from '../utils/utils'; 
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-    const [isLoading, setIsLoading] = useState(false); // Para o loading manual (FE-06)
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    try {
+      await login(email, password);
+      window.location.href = "/dashboard";
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        setIsLoading(true); // ⭐️ 1. Exibir Loading (Início da FE-06)
+  return (
+    <div>
+      <h1>PilotMaster Login</h1>
 
-        try {
-            // A credencial de teste que deve funcionar agora: admin@pilotmaster.com / Admin@123
-            const result = await login(email, password);
+      <form onSubmit={handleLogin}>
+        <input
+          type="email"
+          placeholder="E-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-            if (result.success) {
-                // Login Aprovado (QA-05 Aprovado!)
-                navigate('/home'); // Redireciona para a rota protegida
-                // showToast('success', 'Bem-vindo ao PilotMaster!'); 
-            }
+        <input
+          type="password"
+          placeholder="Senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        } catch (error) {
-            // ⭐️ 2. Exibir Toast de Erro (Fim da FE-06)
-            console.error(error.message);
-            // showToast('error', error.message); 
-        } finally {
-            setIsLoading(false); // ⭐️ 3. Ocultar Loading (Fim da FE-06)
-        }
-    };
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "Entrando..." : "Entrar"}
+        </button>
 
-    return (
-        <form onSubmit={handleSubmit}>
-            {/* Input para Email, ligando ao estado 'email' */}
-            <input 
-                type="email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                placeholder="Email" 
-            />
-            {/* Input para Senha, ligando ao estado 'password' */}
-            <input 
-                type="password" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
-                placeholder="Senha" 
-            />
-            
-            [cite_start]{/* O botão 'ENTRAR' do wireframe [cite: 48] */}
-            <button type="submit" disabled={isLoading}>
-                {isLoading ? 'Carregando...' : 'ENTRAR'} 
-            </button>
-            {/* Aqui você integraria o componente de spinner de loading do Claudio */}
-        </form>
-    );
-};
-
-export default Login;
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </form>
+    </div>
+  );
+}

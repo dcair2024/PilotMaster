@@ -22,3 +22,16 @@ C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\refin
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.pdb
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\ref\PilotMaster.Domain.dll
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\bin\Debug\net8.0\PilotMaster.Domain.deps.json
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\bin\Debug\net8.0\PilotMaster.Domain.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\bin\Debug\net8.0\PilotMaster.Domain.pdb
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.sourcelink.json
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\refint\PilotMaster.Domain.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\PilotMaster.Domain.pdb
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Domain\obj\Debug\net8.0\ref\PilotMaster.Domain.dll

@@ -21,3 +21,15 @@ C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotM
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\refint\PilotMaster.Tests.dll
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.pdb
 C:\Users\Davi\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\ref\PilotMaster.Tests.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\bin\Debug\net8.0\PilotMaster.Tests.deps.json
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\bin\Debug\net8.0\PilotMaster.Tests.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\bin\Debug\net8.0\PilotMaster.Tests.pdb
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.AssemblyInfo.cs
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.sourcelink.json
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\refint\PilotMaster.Tests.dll
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\PilotMaster.Tests.pdb
+C:\Users\User\source\repos\PilotMaster\PilotMaster.Tests\obj\Debug\net8.0\ref\PilotMaster.Tests.dll

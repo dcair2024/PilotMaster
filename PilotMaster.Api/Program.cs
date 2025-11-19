@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PilotMaster.Application.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 using PilotMaster.Application.Services;
 using PilotMaster.Infrastructure.Data;
 using System.Reflection;
@@ -13,9 +16,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configuração do DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
         b => b.MigrationsAssembly("PilotMaster.Infrastructure")));
 
 
@@ -68,9 +71,15 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+
+
 // Injeção de Dependência
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddAuthorization();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
 
 // Configure a Autenticação JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -99,12 +108,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 const string AllowPilotMasterOrigin = "_AllowPilotMasterOrigin";
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: AllowPilotMasterOrigin,
+    options.AddPolicy("AllowFrontend",
         policy =>
         {
-            // Permite o acesso APENAS do endereço do Frontend da Gemima
-            // O Frontend da Gemima está rodando em http://localhost:5175
-            policy.WithOrigins("http://localhost:5175")
+            policy.WithOrigins("http://localhost:5173")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -113,7 +120,8 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
-app.UseCors(AllowPilotMasterOrigin);
+app.UseCors("AllowFrontend");
+
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -129,6 +137,12 @@ app.UseHttpsRedirection();
 
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    await IdentitySeed.SeedAsync(services);
+}
 
 app.Run();
 

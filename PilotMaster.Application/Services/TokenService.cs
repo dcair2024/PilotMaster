@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
+
 namespace PilotMaster.Application.Services
 {
     // Implementação da interface ITokenService

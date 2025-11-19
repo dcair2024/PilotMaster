@@ -6,9 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PilotMaster.Domain\PilotMaster.Domain.csproj" />
-    <ProjectReference Include="..\PilotMaster.Infrastructure\PilotMaster.Infrastructure.csproj" />
+	<ItemGroup>
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" />
+	    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+  </ItemGroup>
+
+<ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" />
+</ItemGroup>
 </Project>
