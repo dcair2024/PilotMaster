@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+ï»¿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -14,19 +14,20 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração do DbContext
+// ConfiguraÃ§Ã£o do DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
-        b => b.MigrationsAssembly("PilotMaster.Infrastructure")));
+    // ðŸš¨ COMENTE ESTA LINHA: options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    // â¬‡ï¸ FORÃ‡A O VALOR CORRETO DO SQLITE NO CÃ“DIGO â¬‡ï¸
+    options.UseSqlite("Data Source=PilotMaster.db"));
+
 
 
 // ADICIONE ESTA LINHA: Habilita o suporte a Controllers MVC/API
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        // Esta linha garante que o servidor entenda e use o padrão camelCase,
+        // Esta linha garante que o servidor entenda e use o padrÃ£o camelCase,
         // alinhando-se ao Fronten (JavaScript).
         options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
     });
@@ -41,11 +42,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PilotMaster API", Version = "v1" });
-    // Configuração para incluir comentários XML 
+    // ConfiguraÃ§Ã£o para incluir comentÃ¡rios XML 
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 
-    // Configuração de Segurança JWT no Swagger 
+    // ConfiguraÃ§Ã£o de SeguranÃ§a JWT no Swagger 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "Insira o token JWT no formato: Bearer {token}",
@@ -73,7 +74,7 @@ builder.Services.AddSwaggerGen(c =>
 
 
 
-// Injeção de Dependência
+// InjeÃ§Ã£o de DependÃªncia
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddAuthorization();
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
@@ -81,7 +82,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddDefaultTokenProviders();
 
 
-// Configure a Autenticação JWT
+// Configure a AutenticaÃ§Ã£o JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -96,11 +97,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
 
-            // Valida a Audiência (Audience)
+            // Valida a AudiÃªncia (Audience)
             ValidateAudience = true,
             ValidAudience = builder.Configuration["Jwt:Audience"],
 
-            // Valida o tempo de expiração (Expiry)
+            // Valida o tempo de expiraÃ§Ã£o (Expiry)
             ValidateLifetime = true,
             ClockSkew = TimeSpan.Zero
         };
@@ -111,7 +112,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173")
+            policy.WithOrigins("http://localhost:5174")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });

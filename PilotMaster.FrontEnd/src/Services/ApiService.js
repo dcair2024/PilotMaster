@@ -29,3 +29,4 @@ export const fetchAuthenticated = async (endpoint, options = {}) => {
 
   return response.json();
 };
+

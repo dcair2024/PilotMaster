@@ -3,32 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.application\\pilotmaster.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\pilotmaster.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.infrastructure\\data\\identityseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|solutionrelative:pilotmaster.infrastructure\\data\\identityseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.infrastructure\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|solutionrelative:pilotmaster.infrastructure\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.infrastructure\\migrations\\20251119174626_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|solutionrelative:pilotmaster.infrastructure\\migrations\\20251119174626_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.infrastructure\\pilotmaster.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|solutionrelative:pilotmaster.infrastructure\\pilotmaster.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.infrastructure\\data\\identityseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|solutionrelative:pilotmaster.infrastructure\\data\\identityseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA231389-E420-4602-B738-0AF1BD739048}|PilotMaster.Domain\\PilotMaster.Domain.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA231389-E420-4602-B738-0AF1BD739048}|PilotMaster.Domain\\PilotMaster.Domain.csproj|solutionrelative:pilotmaster.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.application\\pilotmaster.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\pilotmaster.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65A8397B-9F4C-46F4-944B-967EFB188178}|PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,18 +60,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA231389-E420-4602-B738-0AF1BD739048}|PilotMaster.Domain\\PilotMaster.Domain.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.domain\\entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA231389-E420-4602-B738-0AF1BD739048}|PilotMaster.Domain\\PilotMaster.Domain.csproj|solutionrelative:pilotmaster.domain\\entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|solutionrelative:pilotmaster.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD2EF7F-6C4B-4F36-8FC6-7370A2DCA44B}|PilotMaster.Application\\PilotMaster.Application.csproj|solutionrelative:pilotmaster.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{095EC448-8E92-471A-A25F-8CBAFDAA358E}|PilotMaster.Api\\PilotMaster.Api.csproj|c:\\users\\user\\source\\repos\\pilotmaster\\pilotmaster.api\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,7 +109,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -113,46 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs",
-              "RelativeDocumentMoniker": "PilotMaster.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs",
-              "RelativeToolTip": "PilotMaster.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T19:45:22.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DesignTimeDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
-              "RelativeDocumentMoniker": "PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
-              "RelativeToolTip": "PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T13:53:50.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "PilotMaster.Application\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Services\\TokenService.cs*",
-              "RelativeToolTip": "PilotMaster.Application\\Services\\TokenService.cs*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAEIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T19:58:11.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "PilotMaster.Application.csproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
               "RelativeDocumentMoniker": "PilotMaster.Application\\PilotMaster.Application.csproj",
@@ -165,34 +134,151 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PilotMaster.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
               "RelativeDocumentMoniker": "PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
               "RelativeToolTip": "PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-11-10T15:08:36.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "DesignTimeDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
+              "RelativeToolTip": "PilotMaster.Infrastructure\\DesignTimeDbContextFactory.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T13:53:50.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PilotMaster.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\appsettings.json",
+              "RelativeToolTip": "PilotMaster.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T19:44:22.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IdentitySeed.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\Data\\IdentitySeed.cs",
               "RelativeDocumentMoniker": "PilotMaster.Infrastructure\\Data\\IdentitySeed.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\Data\\IdentitySeed.cs",
               "RelativeToolTip": "PilotMaster.Infrastructure\\Data\\IdentitySeed.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T13:04:03.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Program.cs*",
+              "RelativeToolTip": "PilotMaster.Api\\Program.cs*",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T19:45:22.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20251119174626_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\Migrations\\20251119174626_InitialCreate.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Infrastructure\\Migrations\\20251119174626_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\Migrations\\20251119174626_InitialCreate.cs",
+              "RelativeToolTip": "PilotMaster.Infrastructure\\Migrations\\20251119174626_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T17:46:30.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PilotMaster.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PilotMaster.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T17:29:09.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Application\\Interfaces\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Interfaces\\ITokenService.cs",
+              "RelativeToolTip": "PilotMaster.Application\\Interfaces\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T19:57:08.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Domain\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\Entities\\Usuario.cs",
+              "RelativeToolTip": "PilotMaster.Domain\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T13:40:38.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PilotMaster.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T20:05:46.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "PilotMaster.Api",
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "PilotMaster.Application\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Services\\TokenService.cs",
+              "RelativeToolTip": "PilotMaster.Application\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T19:58:11.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PilotMaster.Api.csproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
               "RelativeDocumentMoniker": "PilotMaster.Api\\PilotMaster.Api.csproj",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
@@ -204,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -217,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "PilotMaster.Infrastructure\\Data\\AppDbContext.cs",
@@ -230,59 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "PilotMaster.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\appsettings.json",
-              "RelativeToolTip": "PilotMaster.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-10T19:44:22.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\Entities\\Class1.cs",
-              "RelativeDocumentMoniker": "PilotMaster.Domain\\Entities\\Class1.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\Entities\\Class1.cs",
-              "RelativeToolTip": "PilotMaster.Domain\\Entities\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T13:40:38.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Interfaces\\ITokenService.cs",
-              "RelativeDocumentMoniker": "PilotMaster.Application\\Interfaces\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\Interfaces\\ITokenService.cs",
-              "RelativeToolTip": "PilotMaster.Application\\Interfaces\\ITokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T19:57:08.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "PilotMaster.Api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "PilotMaster.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T20:05:46.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\DTOs\\LoginRequest.cs",
               "RelativeDocumentMoniker": "PilotMaster.Application\\DTOs\\LoginRequest.cs",
@@ -295,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "PilotMaster.Api\\Controllers\\DashboardController.cs",
@@ -308,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TokenResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\DTOs\\TokenResponse.cs",
               "RelativeDocumentMoniker": "PilotMaster.Application\\DTOs\\TokenResponse.cs",
@@ -321,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\README.md",
               "RelativeDocumentMoniker": "PilotMaster.Api\\README.md",
@@ -334,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "DashboardMetricsDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\DTOs\\DashboardMetricsDto.cs",
               "RelativeDocumentMoniker": "PilotMaster.Application\\DTOs\\DashboardMetricsDto.cs",
@@ -347,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "NavioAtivoDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\DTOs\\NavioAtivoDto.cs",
               "RelativeDocumentMoniker": "PilotMaster.Application\\DTOs\\NavioAtivoDto.cs",
@@ -360,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ManobraRecenteDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\DTOs\\ManobraRecenteDto.cs",
               "RelativeDocumentMoniker": "PilotMaster.Application\\DTOs\\ManobraRecenteDto.cs",
@@ -373,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Manobra.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\Entities\\Manobra.cs",
               "RelativeDocumentMoniker": "PilotMaster.Domain\\Entities\\Manobra.cs",
@@ -386,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Navio.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\Entities\\Navio.cs",
               "RelativeDocumentMoniker": "PilotMaster.Domain\\Entities\\Navio.cs",
@@ -399,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Tests\\Class1.cs",
               "RelativeDocumentMoniker": "PilotMaster.Tests\\Class1.cs",

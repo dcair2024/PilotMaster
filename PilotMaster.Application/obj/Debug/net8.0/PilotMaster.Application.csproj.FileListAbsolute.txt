@@ -37,9 +37,7 @@ C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\PilotMaster.Application.dll
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\PilotMaster.Application.pdb
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\PilotMaster.Domain.dll
-C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\PilotMaster.Infrastructure.dll
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\PilotMaster.Domain.pdb
-C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\bin\Debug\net8.0\PilotMaster.Infrastructure.pdb
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\obj\Debug\net8.0\PilotMaster.Application.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\obj\Debug\net8.0\PilotMaster.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\source\repos\PilotMaster\PilotMaster.Application\obj\Debug\net8.0\PilotMaster.Application.AssemblyInfoInputs.cache

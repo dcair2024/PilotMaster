@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
+import Login from "./Pages/Login";
 import Dashboard from "./pages/Dashboard";
 
 export default function App() {
@@ -12,3 +12,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+

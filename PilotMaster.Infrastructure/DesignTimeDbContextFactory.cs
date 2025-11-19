@@ -10,7 +10,7 @@ namespace PilotMaster.Infrastructure.Data
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
             // MESMA CONNECTION DO appsettings.json
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=PilotMasterDB;Trusted_Connection=True;MultipleActiveResultSets=true;";
+            var connectionString = "Data Source=PilotMaster.db";
 
             optionsBuilder.UseSqlite(connectionString);
 

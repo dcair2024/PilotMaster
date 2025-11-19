@@ -7,6 +7,7 @@ using PilotMaster.Infrastructure.Data;
 using System.Security.Claims;
 using System.Security.Cryptography; // Para usar SHA256
 using System.Text;                  // Para usar Encoding.UTF8
+using PilotMaster.Domain.Entities; // Se Usuario estiver faltando
 
 namespace PilotMaster.Api.Controllers
 {
