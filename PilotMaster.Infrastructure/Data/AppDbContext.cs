@@ -11,16 +11,8 @@ namespace PilotMaster.Infrastructure.Data
         {
         }
 
-        // Seus DbSets de domínio
-        public DbSet<Usuario> Usuarios { get; set; } = null!;
-        public DbSet<Navio> Navios { get; set; } = null!;
-        public DbSet<Manobra> Manobras { get; set; } = null!;
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            // Mapeamentos adicionais (se tiver)
-        }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Navio> Navios { get; set; }
+        public DbSet<Manobra> Manobras { get; set; }
     }
 }

@@ -1,64 +1,46 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PilotMaster.Application.DTOs;
-using PilotMaster.Application.Interfaces;
-using PilotMaster.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Threading.Tasks;
+using PilotMaster.Domain.Entities;
+using PilotMaster.Application.Interfaces;
 
-namespace PilotMaster.Api.Controllers
+[ApiController]
+[Route("api/[controller]")]
+public class AuthController : ControllerBase
 {
-    [Route("api/auth")]
-    [ApiController]
-    public class AuthController : ControllerBase
+    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly ITokenService _tokenService;
+
+    public AuthController(
+        UserManager<ApplicationUser> userManager,
+        ITokenService tokenService)
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly ITokenService _tokenService;
+        _userManager = userManager;
+        _tokenService = tokenService;
+    }
 
-        public AuthController(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
-            ITokenService tokenService)
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _tokenService = tokenService;
-        }
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(string email, string password)
+    {
+        var user = new ApplicationUser { UserName = email, Email = email };
+        var result = await _userManager.CreateAsync(user, password);
 
-        [HttpPost("login")]
-        public async Task<ActionResult<TokenResponse>> Login([FromBody] LoginRequest request)
-        {
-            var user = await _userManager.FindByEmailAsync(request.Email);
+        if (!result.Succeeded)
+            return BadRequest(result.Errors);
 
-            if (user == null)
-                return Unauthorized(new { Message = "Email ou senha inválidos." });
+        return Ok("Usuário criado!");
+    }
 
-            var result = await _signInManager.CheckPasswordSignInAsync(
-                user,
-                request.Senha,
-                lockoutOnFailure: false);
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(string email, string password)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        if (user == null) return Unauthorized();
 
-            if (!result.Succeeded)
-                return Unauthorized(new { Message = "Email ou senha inválidos." });
+        var valid = await _userManager.CheckPasswordAsync(user, password);
+        if (!valid) return Unauthorized();
 
-            var roles = await _userManager.GetRolesAsync(user);
-            var role = roles.FirstOrDefault() ?? "Agente";
+        var token = _tokenService.GenerateToken(user);
 
-            var accessToken = _tokenService.GenerateAccessToken(user, role);
-            var refreshToken = _tokenService.GenerateRefreshToken();
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var securityToken = tokenHandler.ReadToken(accessToken) as JwtSecurityToken;
-
-            return Ok(new TokenResponse
-            {
-                AccessToken = accessToken,
-                RefreshToken = refreshToken,
-                UserRole = role,
-                Expiration = securityToken!.ValidTo
-            });
-        }
+        return Ok(new { token });
     }
 }
