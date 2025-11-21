@@ -8,11 +8,11 @@ using PilotMaster.Infrastructure.Data;
 
 #nullable disable
 
-namespace PilotMaster.Infrastructure.Migrations
+namespace PilotMaster.Infrastructure.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251120181308_Initial")]
-    partial class Initial
+    [Migration("20251121165353_InitialSetupV2")]
+    partial class InitialSetupV2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,15 +1,15 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Microsoft.Extensions.Logging; // 🔑 NECESSÁRIO para o bloco try/catch do Logger
-
-// 🔑 Namespaces dos seus projetos
-using PilotMaster.Infrastructure.Data;
-using PilotMaster.Domain.Entities;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using PilotMaster.Application.Interfaces;
 using PilotMaster.Application.Services;
+using PilotMaster.Domain.Entities;
+// 🔑 Namespaces dos seus projetos
+using PilotMaster.Infrastructure.Data;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,6 +46,36 @@ builder.Services.AddAuthentication(opt =>
         ValidateIssuer = false,
         ValidateAudience = false
     };
+});
+
+builder.Services.AddSwaggerGen(c =>
+{
+    // Define o esquema de segurança JWT para o Swagger
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Insira o token JWT (apenas o token, sem 'Bearer ')",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+
+    // Garante que os endpoints protegidos usem o esquema "Bearer"
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
 });
 
 // ----------------------------------------------------
@@ -98,15 +128,14 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
-        // 🔑 CORREÇÃO 1: Usando IdentityUser para ser consistente com o IdentitySeed.cs
-        var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
-        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        // ... (O resto do código que injeta ApplicationUser)
+
         var context = services.GetRequiredService<AppDbContext>();
 
         // Aplica migrations pendentes
         context.Database.Migrate();
 
-        // 🔑 CORREÇÃO 2: Usando o nome correto do método (SeedAsync) e passando o parâmetro correto (services)
+        // 🔑 CHAMADA CORRETA: Passando apenas o services
         await IdentitySeed.SeedAsync(services);
     }
     catch (Exception ex)

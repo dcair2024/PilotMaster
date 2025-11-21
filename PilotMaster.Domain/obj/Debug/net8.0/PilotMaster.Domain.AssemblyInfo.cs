@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PilotMaster.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5e003eb034091033db1554a7a22840a35e652f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2976f3f8e7ecc7f0e85ef6e71a2a864355ebf3d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PilotMaster.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PilotMaster.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
