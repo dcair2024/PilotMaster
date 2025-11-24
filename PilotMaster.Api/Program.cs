@@ -10,6 +10,7 @@ using PilotMaster.Domain.Entities;
 // 🔑 Namespaces dos seus projetos
 using PilotMaster.Infrastructure.Data;
 using System.Text;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,12 +19,12 @@ var builder = WebApplication.CreateBuilder(args);
 // ----------------------------------------------------
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+  options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // 🔑 Identity configurado com ApplicationUser
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+  .AddEntityFrameworkStores<AppDbContext>()
+  .AddDefaultTokenProviders();
 
 
 // ----------------------------------------------------
@@ -43,8 +44,8 @@ builder.Services.AddAuthentication(opt =>
     {
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
-        ),
+        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
+      ),
 
         ValidateIssuer = true,
         ValidateAudience = true,
@@ -55,6 +56,10 @@ builder.Services.AddAuthentication(opt =>
 
 builder.Services.AddSwaggerGen(c =>
 {
+    // 🔑 BK-12: Inclui o arquivo XML de documentação.
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+
     // Define o esquema de segurança JWT para o Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
@@ -66,21 +71,21 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer"
     });
 
-    // Garante que os endpoints protegidos usem o esquema "Bearer"
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    // Garante que os endpoints protegidos usem o esquema "Bearer"
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+  {
     {
+      new OpenApiSecurityScheme
+      {
+        Reference = new OpenApiReference
         {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            new string[] {}
+          Type = ReferenceType.SecurityScheme,
+          Id = "Bearer"
         }
-    });
+      },
+      new string[] {}
+    }
+  });
 });
 
 // ----------------------------------------------------
@@ -100,13 +105,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:5173")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod()
-                  .AllowCredentials();
-        });
+      policy =>
+      {
+          policy.WithOrigins("http://localhost:5173")
+           .AllowAnyHeader()
+           .AllowAnyMethod()
+           .AllowCredentials();
+      });
 });
 
 var app = builder.Build();
@@ -115,14 +120,14 @@ using (var scope = app.Services.CreateScope())
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    // 1 - Se não existir a role Admin, cria
-    if (!await roleManager.RoleExistsAsync("Admin"))
+    // 1 - Se não existir a role Admin, cria
+    if (!await roleManager.RoleExistsAsync("Admin"))
     {
         await roleManager.CreateAsync(new IdentityRole("Admin"));
     }
 
-    // 2 - Cria o usuário Admin se ele não existir
-    var user = await userManager.FindByEmailAsync("admin@pilotmaster.com");
+    // 2 - Cria o usuário Admin se ele não existir
+    var user = await userManager.FindByEmailAsync("admin@pilotmaster.com");
 
     if (user == null)
     {
@@ -164,15 +169,15 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
-        // ... (O resto do código que injeta ApplicationUser)
+        // ... (O resto do código que injeta ApplicationUser)
 
-        var context = services.GetRequiredService<AppDbContext>();
+        var context = services.GetRequiredService<AppDbContext>();
 
-        // Aplica migrations pendentes
-        context.Database.Migrate();
+        // Aplica migrations pendentes
+        context.Database.Migrate();
 
-        // 🔑 CHAMADA CORRETA: Passando apenas o services
-        await IdentitySeed.SeedAsync(services);
+        // 🔑 CHAMADA CORRETA: Passando apenas o services
+        await IdentitySeed.SeedAsync(services);
     }
     catch (Exception ex)
     {
