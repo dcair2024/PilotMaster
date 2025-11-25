@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj": {}
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
         "projectName": "PilotMaster.Api",
-        "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Api\\obj\\",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\PilotMaster.Api.csproj",
+        "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Davi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj"
               }
             }
           }
@@ -51,7 +51,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -112,24 +112,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
         "projectName": "PilotMaster.Application",
-        "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Application\\obj\\",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\PilotMaster.Application.csproj",
+        "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Davi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -144,8 +144,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
               }
             }
           }
@@ -160,7 +160,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -199,24 +199,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
         "projectName": "PilotMaster.Domain",
-        "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj",
+        "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Davi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -243,7 +243,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -278,24 +278,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
+    "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
         "projectName": "PilotMaster.Infrastructure",
-        "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\PilotMaster.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Davi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Davi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -310,8 +310,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
+              "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj": {
+                "projectPath": "C:\\Users\\Davi\\source\\repos\\PilotMaster\\PilotMaster.Domain\\PilotMaster.Domain.csproj"
               }
             }
           }
@@ -326,7 +326,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -372,7 +372,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

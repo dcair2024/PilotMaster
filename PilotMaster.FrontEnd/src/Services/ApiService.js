@@ -10,20 +10,25 @@ export const fetchAuthenticated = async (endpoint, options = {}) => {
     ...(options.headers || {})
   };
 
-  if (token) headers.Authorization = `Bearer ${token}`;
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
 
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     ...options,
-    headers
+    headers,
   });
 
+  // Se o token vencer ou for inválido
   if (response.status === 401) {
     logout();
     throw new Error("Sessão expirada. Faça login novamente.");
   }
 
+  // Erros gerais
   if (!response.ok) {
-    const msg = response.statusText || "Erro ao buscar dados.";
+    const text = await response.text();
+    const msg = text || response.statusText || "Erro ao buscar dados.";
     throw new Error(msg);
   }
 

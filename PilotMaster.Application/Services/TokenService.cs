@@ -76,7 +76,7 @@ namespace PilotMaster.Application.Services
                 expiryMinutes = 120; // Padrão de 2 horas se a chave não for encontrada
             }
 
-            var expires = DateTime.UtcNow.AddMinutes(expiryMinutes);
+            var expires = DateTime.UtcNow.AddHours(8);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {

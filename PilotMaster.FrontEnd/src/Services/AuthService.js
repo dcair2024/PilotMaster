@@ -8,10 +8,10 @@ export const getAuthToken = () => {
   return localStorage.getItem("pilotmaster_token");
 };
 
-// Remover token e deslogar
+// Remover token e redirecionar
 export const logout = () => {
   localStorage.removeItem("pilotmaster_token");
-  window.location.href = "/"; // volta pro login
+  window.location.href = "/"; // volta para login
 };
 
 // Fazer login
@@ -24,11 +24,20 @@ export const login = async (email, password) => {
     body: JSON.stringify({ email, password })
   });
 
+  // Se der erro, já retorna mensagem adequada
   if (!response.ok) {
-    throw new Error("Usuário ou senha inválidos.");
+    const msg = await response.text();
+    throw new Error(msg || "Usuário ou senha inválidos.");
   }
 
   const data = await response.json();
-  saveAuthToken(data.token);
+
+  // Salva o token
+  if (data.token) {
+    saveAuthToken(data.token);
+  } else {
+    throw new Error("Token não recebido do servidor.");
+  }
+
   return data;
 };
