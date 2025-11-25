@@ -1,13 +1,13 @@
-import { getAuthToken, logout } from "./AuthService";
+import { getToken, logout } from "./AuthService";
 
 const API_BASE_URL = "https://localhost:7031/api";
 
 export const fetchAuthenticated = async (endpoint, options = {}) => {
-  const token = getAuthToken();
+  const token = getToken();
 
   const headers = {
     "Content-Type": "application/json",
-    ...(options.headers || {})
+    ...(options.headers || {}),
   };
 
   if (token) {
@@ -34,4 +34,3 @@ export const fetchAuthenticated = async (endpoint, options = {}) => {
 
   return response.json();
 };
-
