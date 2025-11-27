@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchAuthenticated } from "../Services/ApiService";
+import fetchAuthenticated from "../Services/fetchAuthenticated";
 import { logout } from "../Services/AuthService";
 
 export default function Dashboard() {
@@ -12,7 +12,7 @@ export default function Dashboard() {
         const data = await fetchAuthenticated("/dashboard");
         setDados(data);
       } catch (err) {
-        setErro(err.message);
+        setErro(err.message || "Erro inesperado.");
       }
     };
 
@@ -33,7 +33,7 @@ export default function Dashboard() {
         </pre>
       )}
 
-      <button onClick={() => logout()}>Sair</button>
+      <button onClick={logout}>Sair</button>
     </div>
   );
 }

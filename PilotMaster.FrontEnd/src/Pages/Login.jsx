@@ -1,52 +1,43 @@
-import { useState } from "react";
-import { login } from "../Services/AuthService";
+// src/Services/AuthService.js
+import { API_BASE_URL } from "../utils.js";
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+export async function login(email, password, twoFactorCode = null, twoFactorRecoveryCode = null) {
+  const url = `${API_BASE_URL}/auth/login`;
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-
-    try {
-      await login(email, password);
-      window.location.href = "/dashboard";
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+  const body = {
+    email,
+    password,
+    twoFactorCode,
+    twoFactorRecoveryCode
   };
 
-  return (
-    <div>
-      <h1>PilotMaster Login</h1>
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
 
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="E-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Login falhou: ${res.status} ${text}`);
+  }
 
-        <input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+  const data = await res.json();
 
-        <button type="submit" disabled={isLoading}>
-          {isLoading ? "Entrando..." : "Entrar"}
-        </button>
+  const token = data?.accessToken ?? data?.token;
+  const refreshToken = data?.refreshToken ?? null;
 
-        {error && <p style={{ color: "red" }}>{error}</p>}
-      </form>
-    </div>
-  );
+  if (!token) throw new Error("Token não recebido do servidor.");
+
+  localStorage.setItem("accessToken", token);
+  if (refreshToken) localStorage.setItem("refreshToken", refreshToken);
+
+  if (data?.userRole) {
+    localStorage.setItem("userRole", data.userRole);
+  }
+
+  return data;
 }
